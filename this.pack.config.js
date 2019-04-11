@@ -4,8 +4,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
  * 页面入口
  */
 const _ENTRY = {
+    login: './src/pages/login/login.js',
     index: './src/pages/index/index.js',
-    other:'./src/pages/other/other.js'
+    404:'./src/pages/404/404.js'
 }
 /**
  * 构建输出出口
@@ -21,20 +22,29 @@ const _OUTPUT = {
 const _HTMLWEBPACK = [
     new HtmlWebpackPlugin({
         title: 'index',
+        filename:path.resolve(__dirname, 'dist/login/index.html'),
+        template:path.resolve(__dirname, './src/pages/login/login.html'),
+        favicon:'',
+        hash:true,
+        chunks:["login"],
+        minify:false
+    }),
+    new HtmlWebpackPlugin({
+        title: 'index',
         filename:path.resolve(__dirname, 'dist/index.html'),
         template:path.resolve(__dirname, './src/pages/index/index.html'),
         favicon:'',
         hash:true,
-        chunks:["index","test"],
+        chunks:["index"],
         minify:false
     }),
     new HtmlWebpackPlugin({
-        title: 'other',
-        filename:path.resolve(__dirname, 'dist/other/index.html'),
-        template:path.resolve(__dirname, './src/pages/other/other.html'),
+        title: '404',
+        filename:path.resolve(__dirname, 'dist/404/index.html'),
+        template:path.resolve(__dirname, './src/pages/404/404.html'),
         favicon:'',
         hash:true,
-        chunks:["other"],
+        chunks:["404"],
         minify:false
     })
 ]

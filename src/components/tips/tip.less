@@ -1,0 +1,27 @@
+@background:rgba(255,255,255,1);
+@_height:8px;
+@_weigth:10px;
+.tips{
+    position: absolute;
+    color: #000;
+    background: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid @background;
+    margin: 8px;
+    font-size: 12px;
+}
+.tips::before{
+    position: absolute;
+    box-sizing: border-box;
+    transform: translateY(-100%);
+    top:0;
+    left:4px;
+    content: '';
+    height: @_height;
+    width: @_weigth;
+    border-top: @_height solid rgba(0,0,0,0);
+    border-bottom: @_height solid @background;
+    border-left: @_weigth solid rgba(0,0,0,0);
+    border-right: @_weigth solid rgba(0,0,0,0);
+}

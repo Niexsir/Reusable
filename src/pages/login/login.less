@@ -1,0 +1,102 @@
+html,body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #002275;
+    overflow: hidden;
+    background: -webkit-radial-gradient(#003eaa, #002275); /* Safari 5.1 - 6.0 */
+    background: -o-radial-gradient(#003eaa, #002275); /* Opera 11.6 - 12.0 */
+    background: -moz-radial-gradient(#003eaa, #002275); /* Firefox 3.6 - 15 */
+    background: radial-gradient(#003eaa, #002275); /* 标准的语法（必须放在最后） */
+}
+body{
+    box-sizing: border-box;
+    padding: 5px
+}
+.login-container{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    width: 312px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 3px 5px 1px #D7D7DB;
+    h2{
+        font-size:16px;
+        font-weight:600;
+        padding: 6px 8px;
+        margin: 0;
+        text-align: left;
+        border-bottom: 4px solid #eee
+    }
+    form{
+        font-size: 0;
+        &>div{
+            padding: 12px 6px
+        }
+        label{
+            font-size: 14px;
+            display: inline-block;
+            width: 24%;
+            text-align: right
+        }
+        input{
+            box-sizing:border-box;
+            width: 76%;
+            height: 32px;
+            line-height: 32px;
+            padding: 0 8px;
+            border: 1px solid rgba(12, 12, 13, 0.2);
+            color: #002275;
+            font-weight: 600
+        }
+        input:focus{
+            border: 1px solid blue;
+            box-shadow: 1px 1px 3px #002275
+        }
+        span{
+            font-size: 12px;
+            color: #666
+        }
+        button{
+            width: 100%;
+            border-radius:2px;
+            font-size: 12px;
+            height: 32px;
+            line-height: 32px;
+            padding: 0 8px;
+            color: #fff;
+            border: 0;
+            background:#0060df
+        }
+        button:focus{
+            border: 1px solid blue;
+            box-shadow: 1px 1px 3px #002275
+        }
+        .tip{
+            font-size: 12px;
+            box-sizing: border-box;
+            text-align: left;
+            padding: 0 6px;
+            &>div{
+                display: inline-block;
+                width: calc(56% - 6px);
+            }
+            &>a{
+                display: inline-block;
+                width: calc(20% - 6px); 
+                text-align: right
+            }
+        }
+    }
+}
+.must::before{
+    content: '*';
+    color: red;
+    display: inline;
+    padding: 0 2px;
+    vertical-align: sub
+}
