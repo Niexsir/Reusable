@@ -43,7 +43,6 @@ class Request{
     }
     send(){
         const _type = Object.prototype.toString.call(this.data);
-        console.log(_type)
         if(_type === '[object FormData]' || _type == '[object String]'){
             return this.data
         }else if(_type === '[object HTMLFormElement]'){
@@ -56,6 +55,7 @@ class Request{
                 if(this.request.status == 200){
                     this.sucess(this.request.responseText)
                 }else{
+                    console.log(this.request.status,this.request.statusText)
                     this.error({status:this.request.status,message:this.request.statusText})
                 }
                 this.complete({status:this.request.status,message:this.request.statusText})
