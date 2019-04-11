@@ -13,7 +13,7 @@ const _ENTRY = {
  */
 const _OUTPUT = {
     filename: 'js/[name]/[name].bundle.js',
-    path:  path.resolve(__dirname, "dist"),
+    path:  path.resolve(__dirname, "docs"),
     publicPath:'/'
 }
 /**
@@ -22,7 +22,7 @@ const _OUTPUT = {
 const _HTMLWEBPACK = [
     new HtmlWebpackPlugin({
         title: 'index',
-        filename:path.resolve(__dirname, 'dist/login/index.html'),
+        filename:path.resolve(__dirname, 'docs/login/index.html'),
         template:path.resolve(__dirname, './src/pages/login/login.html'),
         favicon:'',
         hash:true,
@@ -31,7 +31,7 @@ const _HTMLWEBPACK = [
     }),
     new HtmlWebpackPlugin({
         title: 'index',
-        filename:path.resolve(__dirname, 'dist/index.html'),
+        filename:path.resolve(__dirname, 'docs/index.html'),
         template:path.resolve(__dirname, './src/pages/index/index.html'),
         favicon:'',
         hash:true,
@@ -40,7 +40,7 @@ const _HTMLWEBPACK = [
     }),
     new HtmlWebpackPlugin({
         title: '404',
-        filename:path.resolve(__dirname, 'dist/404/index.html'),
+        filename:path.resolve(__dirname, 'docs/404/index.html'),
         template:path.resolve(__dirname, './src/pages/404/404.html'),
         favicon:'',
         hash:true,
