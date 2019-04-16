@@ -14,7 +14,7 @@ const _ENTRY = {
 const _OUTPUT = {
     filename: 'js/[name]/[name].bundle.js',
     path:  path.resolve(__dirname, "docs"),
-    publicPath:'./'
+    publicPath:'/Reusable'
 }
 /**
  * HTML模板
