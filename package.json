@@ -37,7 +37,8 @@
     "test": "jest --config=package.json",
     "serve": "node server.js",
     "start": "webpack-dev-server --open --config webpack.dev",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "github-docs": "webpack --config webpack.dev.js"
   },
   "keywords": [],
   "author": "xiao",
