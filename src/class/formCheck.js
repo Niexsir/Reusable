@@ -8,7 +8,6 @@ class FormCheck{
         this.checkEle = undefined;
         this.init();
         this.status = true;
-        this.message = '';
         this.focusEle = undefined;
         this.eleIndex = undefined;
     }
@@ -31,10 +30,7 @@ class FormCheck{
         }
     }
     getStatus(){
-        return {
-            status: this.status,
-            message: this.message
-        }
+        return this.status
     }
     setTips(){
         for(let [index,item] of this.checkEle.entries()){
