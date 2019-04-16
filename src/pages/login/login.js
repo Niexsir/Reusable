@@ -3,9 +3,13 @@ import '../../fonts/icon/iconfont.css'
 import { tip } from '../../components/tips/tip'
 import { Request } from '../../class/ajax'
 import { SubmitButton } from '../../class/submitButton'
+import { FormCheck } from '../../class/formCheck'
 import '../../mock/mock'
-const _Request = new Request();
+const form = document.getElementById('login-form');
 const submit = document.getElementsByClassName('submit-button')[0];
+const _Request = new Request();
+const sb = new SubmitButton();
+const fc = new FormCheck({ele:form});
 if(process.env.NODE_ENV == 'development'){
     const container = document.getElementsByClassName('login-container')[0];
     const _tip = tip({
@@ -15,10 +19,9 @@ if(process.env.NODE_ENV == 'development'){
     setTimeout(()=>{
         container.removeChild(_tip)
     },4000)
-    
 }
 
-const sb = new SubmitButton();
+
 sb.init({ele:submit,lodingText:'登录中...'});
 submit.addEventListener('click',(e) => {
     const _e = e || window.event;
