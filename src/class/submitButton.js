@@ -1,4 +1,10 @@
 class SubmitButton{
+    /**
+     * @param { HTMLButtonElement } ele
+     * @param { String } text 
+     * @param { String } lodingText
+     * @param { Boolean } toSubmit
+     */
     constructor(){
         this.ele = undefined;
         this.text = undefined;
