@@ -15,11 +15,14 @@ module.exports = {
             },
             {
                 test:/\.less$/,
-                use:[
-                      MiniCssExtractPlugin.loader,
-                     'css-loader', 
-                     'less-loader'
-                    ]
+                use:[{
+                    loader:MiniCssExtractPlugin.loader,
+                    options:{
+                       publicPath: './',
+                    }
+                },
+                'css-loader', 
+                'less-loader']
             },
             /**es6 */
             {
@@ -61,7 +64,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin(['docs']),
         new webpack.optimize.SplitChunksPlugin({
             chunks: "all",
             minSize: 20000,
@@ -76,7 +79,7 @@ module.exports = {
               }
           }),
         new MiniCssExtractPlugin({
-            filename: "Reusable/css/[name]/[name].css",
+            filename: "./css/[name]/[name].css",
             chunkFilename: '[id].[hash].css'
         })
     ].concat(data._HTMLWEBPACK),
