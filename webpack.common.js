@@ -3,7 +3,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 /**清理旧的打包文件 */
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const data = require('./this.pack.config.js');
-const devMode = process.env.NODE_ENV === 'development';
 
 module.exports = {
     entry:data._ENTRY,
@@ -77,8 +76,8 @@ module.exports = {
               }
           }),
         new MiniCssExtractPlugin({
-            filename: "./css/[name]/[name].css",
-            chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+            filename: "Reusable/css/[name]/[name].css",
+            chunkFilename: '[id].[hash].css'
         })
     ].concat(data._HTMLWEBPACK),
     externals:data._externals

@@ -12,7 +12,7 @@ const _ENTRY = {
  * 构建输出出口
  */
 const _OUTPUT = {
-    filename: 'js/[name]/[name].bundle.js',
+    filename: 'Reusable/js/[name]/[name].bundle.js',
     path:  path.resolve(__dirname, "docs"),
     publicPath:'/'
 }
