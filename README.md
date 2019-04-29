@@ -15,5 +15,8 @@
 ## Mock
 前后分离
 
+## Typescript
+初尝typescript
+
 ## 复用代码
 
