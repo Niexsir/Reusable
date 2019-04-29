@@ -26,6 +26,7 @@
     "mini-css-extract-plugin": "^0.5.0",
     "mockjs": "^1.0.1-beta3",
     "style-loader": "^0.23.1",
+    "ts-loader": "^5.4.4",
     "uglifyjs-webpack-plugin": "^2.1.1",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
@@ -35,7 +36,6 @@
   },
   "scripts": {
     "test": "jest --config=package.json",
-    "serve": "node server.js",
     "start": "webpack-dev-server --open --config webpack.dev",
     "build": "webpack --config webpack.prod.js",
     "github-docs": "webpack --config webpack.dev.js"

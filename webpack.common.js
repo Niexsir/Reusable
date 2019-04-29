@@ -34,6 +34,28 @@ module.exports = {
                     }
                 }
             },
+            /**typscript */
+            {
+                test: /\.ts$/,
+                exclude: /(node_modules|bower_components)/,
+                use: [{
+                    loader: 'babel-loader',
+                    options: {
+                        cacheDirectory: true,
+                        presets: [
+                          [
+                            "es2015",
+                            {
+                              "modules": false
+                            }
+                          ],
+                          "es2016"
+                        ]
+                    }
+                },{
+                    loader: 'ts-loader'
+                }]
+            },
             /**图片 */
             {
                 test: /\.(png|svg|jpg|gif)$/,
